@@ -193,7 +193,9 @@ function choosePriceImgNameAvto(i) {
                     //     imgAvto.classList.add('img_transform');
                     // }
 
+                    imgAvto.classList.add('img_transform');
                     imgAvto.src = arrImges[i][j];
+                    
                     newPrice = arrPrices[i][j];         
                     nameAvto = arrNames[i][j];
                     success.selectModel = true;
