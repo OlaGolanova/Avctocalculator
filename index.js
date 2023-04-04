@@ -200,7 +200,7 @@ function choosePriceImgNameAvto(i) {
                         setTimeout(() => {
                             imgAvto.src = arrImges[i][j];
                             imgAvto.classList.add('img_transform'); 
-                        }, 700)
+                        }, 1000)
                 
                     }
                 }
