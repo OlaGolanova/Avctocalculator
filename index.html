@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Калькулятор расчёта стоимости автомобиля</h1>
+        <form name="form" class="form">
+            <div class="form_items form_div">
+                <div class="item item_select">
+                    <select name="avto" id="avto">
+                        <option value="Title" >МАРКА АВТОМОБИЛЯ</option>
+                        <option value="Reno" class="avto" >Reno</option>
+                        <option value="Opel" class="avto">Opel</option>
+                        <option value="Mazda" class="avto">Mazda</option>
+                        <option value="Jaguar" class="avto">Jaguar</option>
+                    </select>  
+        
+                    <select name="modelReno" id="modelReno" class="hidden selectsAvtoModels">
+                        <option class="option">МОДЕЛЬ</option>
+                        <option class="option_modelReno options"> Sandero</option>
+                        <option class="option_modelReno options">Logan</option>
+                        <option class="option_modelReno options"> Duster</option>
+                        <option class="option_modelReno options"> Kaptur</option>
+                    </select>
+        
+                    <select name="modelOPel" id="modelOpel" class="hidden selectsAvtoModels">
+                        <option class="option">МОДЕЛЬ</option>
+                        <option class="option_modelOpel options">Crossland</option>
+                        <option class="option_modelOpel options">Grandland X</option>
+                        <option class="option_modelOpel options">Vivaro</option>
+                        <option class="option_modelOpel options">Combo Life</option>
+                    </select>
+        
+                    <select name="modelMazda" id="modelMazda" class="hidden selectsAvtoModels">
+                        <option class="option">МОДЕЛЬ</option>
+                        <option class="option_modelMazda options">6</option>
+                        <option class="option_modelMazda options">CX-4</option>
+                        <option class="option_modelMazda options">CX-5</option>
+                        <option class="option_modelMazda options">CX-9</option>
+                    </select>
+        
+                    <select name="modelJaguar" id="modelJaguar" class="hidden selectsAvtoModels">
+                        <option class="option">МОДЕЛЬ</option>
+                        <option class="option_modelJaguar options">F-PACE</option>
+                        <option class="option_modelJaguar options">E-PACE</option>
+                        <option class="option_modelJaguar options">I-PACE</option>
+                        <option class="option_modelJaguar options">XF</option>
+                    </select>
+                </div>
+        
+                <div class="item">
+                    <div id="carCondition">СОСТОЯНИЕ:</div>
+                    <input type="radio" value="new"  name="condition" id="new" class="owners" ><label for="new">Новый</label>
+                    <input type="radio" value="used" name="condition" id="used" class="owners"><label for="used">Подержанный</label>
+                </div>
+
+                <div class="wrap_owners hidden item">
+                    <label id="owners">КОЛИЧЕСТВО ВЛАДЕЛЬЦЕВ:</label> <br>
+                    <input type="radio" value="1_2"  name="owners" id="one" class="owners"><label for="one">1-2 </label> 
+                    <input type="radio" value="3" name="owners" id="three" class="owners"><label for="three">3 и более</label>
+                </div>
+        
+                <div class="item">
+                    <div id="fuel">ТОПЛИВО:</div>
+                    <input type="radio" value="petrol"  name="fuel" id="petrol" ><label for="petrol">Бензин</label>
+                    <input type="radio" value="diesel" name="fuel" id="diesel"><label for="diesel">Дизель</label>
+                    <input type="radio" value="gas" name="fuel" id="gas"><label for="gas">Газ</label>
+                    <input type="radio" value="electricity" name="fuel" id="electricity"> <label for="electricity" id="electricityLabel" >Электричество</label>
+                </div>
+        
+                <div class="item">
+                    <div id="engine" for="engineCapacity" class="item">ОБЪЁМ ДВИГАТЕЛЯ(от 1.1 л до 3.5 л):</div><input type="text" name="engineCapacity" id="engineCapacity" required minlength="3" maxlength="3">
+
+                    <div class="errorsInfo"></div>
+                </div>
+            
+                <div class="item payment">
+                    <div id="paymentMethod">СПОСОБ ОПЛАТЫ:</div>
+                    <input type="radio" value="card"  name="paymentMethod" id="card" ><label for="card">Карта</label> <br>
+                    <input type="radio" value="cash" name="paymentMethod" id="cash"><label for="cash">Наличные</label> <br>
+                    <input type="radio" value="check" name="paymentMethod" id="check"><label for="check">Счёт на юр лицо</label> 
+                </div>
+        
+                <div class="wrap-btn item">
+                    <input type="submit" id="btn" value="Рассчитать стоимость"></input> <br>
+                    <div class="resultPrice"></div>
+                </div>
+                <div class="errorsInfo2"></div>
+            </div>
+            
+            <div class="form_img form_div">
+                <img id="img" src="img/avtoPicture.jpg" alt="avto" class="img_transform">
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

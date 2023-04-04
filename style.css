@@ -1,0 +1,164 @@
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: rgba(178, 178, 178, 0.74);
+    color: rgba(23, 23, 22, 0.74);
+}
+
+h1 {
+    padding: 50px 0 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+img {
+    border-radius: 10px;
+    width: 100%;
+    transform: translateX(350%);
+    transition-duration: 2s;
+    -webkit-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+    -moz-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+    box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+}
+.img_transform {
+    transform: translateX(0%);
+}
+option:first-child{
+    display:none;
+    }
+
+select {
+    margin-top: 15px;
+    width: 250px;
+    height: 30px;
+}
+option {
+    width: 250px;
+    height: 30px;
+}
+#engineCapacity {
+    margin-left: 20px;
+    width: 50px;
+    height: 30px;
+}
+#btn {
+    width: 200px;
+    height: 30px;
+}
+.resultPrice {
+    width: 200px;
+    height: 50px;
+    border: none;
+    margin-bottom: 20px;
+}
+#new, #petrol, #card, #one {
+    margin-left: 20px;
+}
+#carCondition, #owners, #fuel, #engine, #paymentMethod {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#card {
+    margin-left: 10px;
+}
+input[type=radio] {
+    margin: 10px;
+}
+label {
+    margin-right: 15px;
+}
+.wrap-btn {
+    display: flex;
+}
+.wrap-btn input {
+    margin-right: 50px;
+}
+.hidden {
+    display: none;
+}
+
+.item {
+    padding: 20px 0;
+}
+.form_div {
+    max-width: 700px;
+}
+.form_div:last-child {
+    margin-top: 50px;
+
+}
+.form {
+    overflow: hidden;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+}
+.errorsInfo, .errorsInfo2 {
+    color: red;
+}
+.wrapper {
+    background-color: white;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 70px;
+    -webkit-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+    -moz-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+    box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
+}
+
+@media(max-width: 575px) {
+    h1 {
+        font-size: 18px;
+        padding: 50px 0 50px 0;
+    }
+    #carCondition, #owners, #fuel, #engine, #paymentMethod {
+        font-size: 15px;
+
+    }
+    .form {
+        width: 100%;
+        padding: 0px;
+    }
+    .item_select {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+        box-shadow:none;
+    }
+    .item {
+        position: relative;
+        padding: 20px 0;
+    }
+    label {
+        margin: 5px;
+    }
+    select {
+        margin-top: 15px;
+        width: 200px;
+        height: 30px;
+    }
+    option {
+        width: 200px;
+        height: 30px;
+    }
+    .wrapper {
+        background-color: white;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .wrap-btn {
+    display: flex;
+    flex-direction: column;
+    }
+}
