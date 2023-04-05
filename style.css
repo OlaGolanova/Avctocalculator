@@ -18,7 +18,7 @@ h1 {
 img {
     border-radius: 10px;
     width: 100%;
-    transform: translateX(350%);
+    transform: translateX(250%);
     transition-duration: 2s;
     -webkit-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
     -moz-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);

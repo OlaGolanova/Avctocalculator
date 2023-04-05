@@ -105,7 +105,7 @@ const avtoModelOptions = document.querySelectorAll('.avto');
 
 const selectsAvtoModels = document.querySelectorAll('.selectsAvtoModels'); // коллекция самих селектов Рeно, Опель, Мазда, Ягуар
 
-
+const optionsTitle = document.querySelectorAll('.option');
 const optionsModelReno = document.querySelectorAll('.option_modelReno');
 const optionsModelOpel = document.querySelectorAll('.option_modelOpel');
 const optionsModelMazda = document.querySelectorAll('.option_modelMazda');
@@ -167,6 +167,7 @@ selectAvtoModel.addEventListener('input', () =>  {
     imgAvto.classList.remove('img_transform');
     resultPrice.textContent  = '';
     addClassListHidden();
+    getOptionsTitle();
 
         for(let i = 0; i < avtoModelOptions.length; i++) {
             if(avtoModelOptions[i].selected) {
@@ -182,42 +183,49 @@ function choosePriceImgNameAvto(i) {
     selectsAvtoModels.forEach(function(el){
 
         el.addEventListener('input', () => {
-        
-                for (let j = 0; j < arrOptions[i].length; j++){
-                    if (arrOptions[i][j].selected) {
-                
-                    if (imgAvto.classList.contains('img_transform')) {
-                        imgAvto.classList.remove('img_transform');
-                
-                        setTimeout(() => {
-                            imgAvto.src = arrImges[i][j];
-                            imgAvto.classList.add('img_transform'); 
-                        }, 700)
 
-                    } else {
-                        imgAvto.src = arrImges[i][j];
-                        imgAvto.classList.add('img_transform');
-                    }
-                    
+
+            for (let j = 0; j < arrOptions[i].length; j++){
+                if (arrOptions[i][j].selected) {
+            
+                    imgAvto.classList.remove('img_transform');
+
                     newPrice = arrPrices[i][j];         
                     nameAvto = arrNames[i][j];
                     success.selectModel = true;
                     resultPrice.textContent  = '';
-
-                    // imgAvto.classList.remove('img_transform');
-
-                    // newPrice = arrPrices[i][j];         
-                    // nameAvto = arrNames[i][j];
-                    // success.selectModel = true;
-                    // resultPrice.textContent  = '';
-                
-                    //     setTimeout(() => {
-                    //         imgAvto.src = arrImges[i][j];
-                    //         imgAvto.classList.add('img_transform'); 
-                    //     }, 700)
-                
-                    }
+            
+                    setTimeout(() => {
+                        imgAvto.src = arrImges[i][j];
+                        imgAvto.classList.add('img_transform'); 
+                    }, 700)
+            
                 }
+            }
+        
+                // for (let j = 0; j < arrOptions[i].length; j++){
+                //     if (arrOptions[i][j].selected) {
+                
+                //     if (imgAvto.classList.contains('img_transform')) {
+                //         imgAvto.classList.remove('img_transform');
+                
+                //         setTimeout(() => {
+                //             imgAvto.src = arrImges[i][j];
+                //             imgAvto.classList.add('img_transform'); 
+                //         }, 700)
+
+                //     } else {
+                //         imgAvto.src = arrImges[i][j];
+                //         imgAvto.classList.add('img_transform');
+                //     }
+
+                //     newPrice = arrPrices[i][j];         
+                //     nameAvto = arrNames[i][j];
+                //     success.selectModel = true;
+                //     resultPrice.textContent  = '';
+                
+                //     }
+                // }
             });
     });    
 }
@@ -229,6 +237,22 @@ function addClassListHidden() {
         selectsAvtoModels[i].classList.add('hidden');
     }
 };
+
+//Функция выводит значение "МОДЕЛЬ" в инпута выбора модели при повторном обращении к любой марке(не остается предыдущий выбор марки)
+function getOptionsTitle() {
+    for ( let i = 0; i < optionsTitle.length; i++) {
+        optionsTitle[i].selected = true;
+    }
+};
+
+
+for(let i = 0; i < tab.length; i++) {
+    if(target == tab[i]) {
+        hideTabContent(0);
+        showTabContent(i);
+        break;
+    }
+}
 
 
 checkNew.addEventListener('input', () => {
@@ -358,3 +382,4 @@ buttonPrice.addEventListener('click', function(event){
 
     form.reset();
 });
+
