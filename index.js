@@ -1,47 +1,47 @@
 'use strict';
-//Анимация при загрузке странцы
-window.addEventListener('DOMContentLoaded', () => {
-    animation();
+//Анимация при загрузке странцы GSAP
+// window.addEventListener('DOMContentLoaded', () => {
+//     animation();
 
-});
-function animation(){
-    gsap.registerPlugin(ScrollTrigger);
+// });
+// function animation(){
+//     gsap.registerPlugin(ScrollTrigger);
 
-    let mm = gsap.matchMedia();
+//     let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 1025px)", () => {
+//     mm.add("(min-width: 1025px)", () => {
 
-        const tlTitle = gsap.timeline({});
+//         const tlTitle = gsap.timeline({});
 
-        tlTitle.from('.form_items', {
-            xPercent: -200,
-            duration: 1, 
-        })
-        tlTitle.from('.form_img', {
-            xPercent: 200,
-            duration: 1
-        }, '<',)
+//         tlTitle.from('.form_items', {
+//             xPercent: -200,
+//             duration: 1, 
+//         })
+//         tlTitle.from('.form_img', {
+//             xPercent: 200,
+//             duration: 1
+//         }, '<',)
 
-    });
+//     });
 
     
-    mm.add("(max-width: 1024px)", () => {
+//     mm.add("(max-width: 1024px)", () => {
 
-        const tlTitle = gsap.timeline({});
+//         const tlTitle = gsap.timeline({});
 
-        tlTitle.from('.form_items', {
-            xPercent: -200,
-            duration: 1, 
-        })
-        tlTitle.from('.form_img', {
-            xPercent: 200,
-            duration: 1
-        })
+//         tlTitle.from('.form_items', {
+//             xPercent: -200,
+//             duration: 1, 
+//         })
+//         tlTitle.from('.form_img', {
+//             xPercent: 200,
+//             duration: 1
+//         })
 
-    });
+//     });
 
 
-}
+// }
 
 
 //Создаю массивы объектов для каждой марки авто
