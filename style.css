@@ -113,6 +113,12 @@ label {
     -moz-box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
     box-shadow: 1px 1px 18px 6px rgba(55,  55,  48, 0.74);
 }
+.form_img {
+    transform: translateX(200%);
+}
+.form_items {
+    transform: translateX(-200%);
+}
 
 @media(max-width: 575px) {
     h1 {
