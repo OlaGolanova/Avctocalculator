@@ -162,7 +162,7 @@ const success = {
 };
 
 
-//При нажатии на select выбора марки авто, срабатывает функция выбирающая нужную модель авто
+//При нажатии на select выбора марки авто, срабатывает функция выбирающая нужную марку авто
 selectAvtoModel.addEventListener('input', () =>  {
     imgAvto.classList.remove('img_transform');
     resultPrice.textContent  = '';
@@ -188,10 +188,6 @@ function choosePriceImgNameAvto(i) {
                 
                     if (imgAvto.classList.contains('img_transform')) {
                         imgAvto.classList.remove('img_transform');
-                    } else {
-                        imgAvto.src = arrImges[i][j];
-                        imgAvto.classList.add('img_transform');
-                    }
 
                     newPrice = arrPrices[i][j];         
                     nameAvto = arrNames[i][j];
@@ -202,12 +198,41 @@ function choosePriceImgNameAvto(i) {
                             imgAvto.src = arrImges[i][j];
                             imgAvto.classList.add('img_transform'); 
                         }, 700)
+
+                    } else {
+                        imgAvto.src = arrImges[i][j];
+                        imgAvto.classList.add('img_transform');
+                        newPrice = arrPrices[i][j];         
+                        nameAvto = arrNames[i][j];
+                        success.selectModel = true;
+                        resultPrice.textContent  = '';
+                
+                        // setTimeout(() => {
+                        //     imgAvto.src = arrImges[i][j];
+                        //     imgAvto.classList.add('img_transform'); 
+                        // }, 300)
+                        
+                    }
+
+                    // imgAvto.classList.remove('img_transform');
+
+                    // newPrice = arrPrices[i][j];         
+                    // nameAvto = arrNames[i][j];
+                    // success.selectModel = true;
+                    // resultPrice.textContent  = '';
+                
+                    //     setTimeout(() => {
+                    //         imgAvto.src = arrImges[i][j];
+                    //         imgAvto.classList.add('img_transform'); 
+                    //     }, 700)
                 
                     }
                 }
             });
     });    
 }
+
+
 
 //Функция добавляет ко всем selects выбора  модели Авто класс 'hidden', тем самым делая их невидимыми
 function addClassListHidden() {
