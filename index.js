@@ -29,12 +29,12 @@ function animation(){
 
         const tlTitle = gsap.timeline({});
 
-        tlTitle.from('.form_items', {
-            xPercent: -200,
+        tlTitle.to('.form_items', {
+            xPercent: 200,
             duration: 1, 
         })
-        tlTitle.from('.form_img', {
-            xPercent: 200,
+        tlTitle.to('.form_img', {
+            xPercent: -200,
             duration: 1
         })
 
