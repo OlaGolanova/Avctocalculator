@@ -164,7 +164,10 @@ label {
         padding: 30px;
     }
     .wrap-btn {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
+    }
+    #electricity {
+        margin-left: 19px;
     }
 }
