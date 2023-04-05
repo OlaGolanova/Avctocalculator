@@ -186,35 +186,8 @@ function choosePriceImgNameAvto(i) {
                 for (let j = 0; j < arrOptions[i].length; j++){
                     if (arrOptions[i][j].selected) {
                 
-                    if (imgAvto.classList.contains('img_transform')) {
-                        imgAvto.classList.remove('img_transform');
-
-                    newPrice = arrPrices[i][j];         
-                    nameAvto = arrNames[i][j];
-                    success.selectModel = true;
-                    resultPrice.textContent  = '';
-                
-                        setTimeout(() => {
-                            imgAvto.src = arrImges[i][j];
-                            imgAvto.classList.add('img_transform'); 
-                        }, 700)
-
-                    } else {
-                        imgAvto.src = arrImges[i][j];
-                        imgAvto.classList.add('img_transform');
-                        newPrice = arrPrices[i][j];         
-                        nameAvto = arrNames[i][j];
-                        success.selectModel = true;
-                        resultPrice.textContent  = '';
-                
-                        // setTimeout(() => {
-                        //     imgAvto.src = arrImges[i][j];
-                        //     imgAvto.classList.add('img_transform'); 
-                        // }, 300)
-                        
-                    }
-
-                    // imgAvto.classList.remove('img_transform');
+                    // if (imgAvto.classList.contains('img_transform')) {
+                    //     imgAvto.classList.remove('img_transform');
 
                     // newPrice = arrPrices[i][j];         
                     // nameAvto = arrNames[i][j];
@@ -225,6 +198,33 @@ function choosePriceImgNameAvto(i) {
                     //         imgAvto.src = arrImges[i][j];
                     //         imgAvto.classList.add('img_transform'); 
                     //     }, 700)
+
+                    // } else {
+                    //     imgAvto.src = arrImges[i][j];
+                    //     imgAvto.classList.add('img_transform');
+                    //     newPrice = arrPrices[i][j];         
+                    //     nameAvto = arrNames[i][j];
+                    //     success.selectModel = true;
+                    //     resultPrice.textContent  = '';
+                
+                    //     // setTimeout(() => {
+                    //     //     imgAvto.src = arrImges[i][j];
+                    //     //     imgAvto.classList.add('img_transform'); 
+                    //     // }, 300)
+                        
+                    // }
+
+                    imgAvto.classList.remove('img_transform');
+
+                    newPrice = arrPrices[i][j];         
+                    nameAvto = arrNames[i][j];
+                    success.selectModel = true;
+                    resultPrice.textContent  = '';
+                
+                        setTimeout(() => {
+                            imgAvto.src = arrImges[i][j];
+                            imgAvto.classList.add('img_transform'); 
+                        }, 700)
                 
                     }
                 }
