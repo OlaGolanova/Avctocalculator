@@ -227,15 +227,6 @@ function getOptionsTitle() {
 };
 
 
-for(let i = 0; i < tab.length; i++) {
-    if(target == tab[i]) {
-        hideTabContent(0);
-        showTabContent(i);
-        break;
-    }
-}
-
-
 checkNew.addEventListener('input', () => {
         wrapOwners.classList.add('hidden');
         success.used = true;
