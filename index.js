@@ -289,7 +289,7 @@ fuel.forEach(function(event){
 
 // Определяем цену в зависимости от объема двигателя, input проверяется на коректность вводимых данных патерном, в случае ошибки выдает сообщение
 engineCapacity.addEventListener('change', () =>  {
-    let regExp = /[1-3]\.[0-5]/; // Регулярное выражение для ввода значения в формате 2 чисел через точку 1.1-3.5
+    let regExp = /[1-2]\.[0-9]|[3]\.[0-5]/; // Регулярное выражение для ввода значения в формате 2 чисел через точку 1.1-3.5
    
     if (regExp.test(engineCapacity.value) == true) {
         priceEngine = +priceFuel + (priceFuel * (+engineCapacity.value / 10));
